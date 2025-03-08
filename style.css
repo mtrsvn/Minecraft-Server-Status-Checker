@@ -2,56 +2,137 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 50px;
-    background-color: #282c34;
-    color: white;
+    background-color: #2C2F33;
+    color: #fefefe;
 }
 
 input {
     padding: 10px;
     width: 250px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #fefefe;
+    border-radius: 8px;
 }
 
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+input:focus {
+    outline: none;
 }
 
-button:hover {
-    background-color: #45a049;
+
+.loader {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background-position: 16px center, 0px center, -16px center;
+    animation: flash 1s linear infinite;
+    background-image: radial-gradient(#ccc 4px, #0000 0),
+                      radial-gradient(#ccc 4px, #0000 0),
+                      radial-gradient(#ccc 4px, #0000 0);
+}   
+@keyframes flash {
+    0% {
+      background-image: radial-gradient(#aaa 4px, #0000 0),
+                        radial-gradient(#aaa 4px, #0000 0),
+                        radial-gradient(#aaa 4px, #0000 0);
+    }
+  
+    33% {
+      background-image: radial-gradient(#aaa 4px, #0000 0),
+                        radial-gradient(#aaa 4px, #0000 0),
+                        radial-gradient(#ddd 4px, #0000 0);
+    }
+  
+    66% {
+      background-image: radial-gradient(#aaa 4px, #0000 0),
+                        radial-gradient(#ddd 4px, #0000 0),
+                        radial-gradient(#ddd 4px, #0000 0);
+    }
+  
+    100% {
+      background-image: radial-gradient(#ddd 4px, #0000 0),
+                        radial-gradient(#ddd 4px, #0000 0),
+                        radial-gradient(#ddd 4px, #0000 0);
+    }
 }
 
 #result {
     margin-top: 20px;
     font-size: 18px;
+    text-align: left;
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+}
+.container {
+    text-align: center;
+}
+
+.server-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 15px;
 }
 
 .server-icon {
     width: 64px;
     height: 64px;
-    margin: 10px auto;
-    display: block;
 }
 
-.status-box {
-    display: inline-block;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
+.server-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 2px;
+}
+
+.server-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.server-status {
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 9px;
+    font-weight: bold;
+    text-align: right;
+    width: fit-content;
 }
 
 .online {
-    background: #4CAF50;
+    background-color: #4CAF50;
     color: white;
 }
 
 .offline {
-    background: #F44336;
+    background-color: #F44336;
     color: white;
+}
+
+button {
+    padding: 11px 20px;
+    cursor: pointer;
+    background-color: #5865F2;
+    color: #fefefe;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.1s ease, background-color 0.3s ease, filter 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(85%);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+hr#result-separator {
+    border: none;
+    border-top: 0.5px solid #23272A;
+    margin-top: 20px;
 }
