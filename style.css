@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: #282c34;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.server-icon {
+    width: 64px;
+    height: 64px;
+    margin: 10px auto;
+    display: block;
+}
+
+.status-box {
+    display: inline-block;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.online {
+    background: #4CAF50;
+    color: white;
+}
+
+.offline {
+    background: #F44336;
+    color: white;
+}
