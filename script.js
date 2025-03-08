@@ -6,7 +6,6 @@ async function checkServer() {
     }
 
     document.getElementById("result").innerHTML = '<div class="loader"></div>';
-    document.getElementById("result-separator").style.display = 'none';
 
     const apiUrl = `https://api.mcsrvstat.us/2/${serverIP}`;
 
@@ -26,7 +25,6 @@ async function checkServer() {
                 <p><strong>Host:</strong> ${serverIP}</p>
                 <p><strong>Port:</strong> ${data.port || "25565"}</p>
             `;
-            document.getElementById("result-separator").style.display = 'block';
             return;
         }
         let serverType = "Unknown";
@@ -60,9 +58,7 @@ async function checkServer() {
             <p><strong>Version:</strong> ${data.version || "Unknown"}</p>
             <p><strong>Server Type:</strong> ${serverType}</p>
         `;
-        document.getElementById("result-separator").style.display = 'block';
     } catch (error) {
         document.getElementById("result").innerHTML = "⚠️ Error fetching server data.";
-        document.getElementById("result-separator").style.display = 'block';
     }
 }
