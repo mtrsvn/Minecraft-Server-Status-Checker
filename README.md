@@ -1,6 +1,6 @@
 # Minecraft Server Status Checker 💻
 
-A simple web application that allows users to check the status of any Minecraft server by entering its IP address and port.
+A simple web application that allows users to check the status of any Minecraft server by entering its IP address.
 
 🔗 **Live Website:** [Minecraft Server Status Checker](https://mtrsvn.github.io/Minecraft-Server-Status-Checker/)
 
