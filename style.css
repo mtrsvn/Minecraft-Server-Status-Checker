@@ -130,3 +130,24 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer p {
+    color: #fefefe;
+    font-size: 12px;
+}
+
+footer a {
+    color: #fefefe;
+    text-decoration: underline;
+}
+
+
